@@ -1,11 +1,13 @@
+/* eslint-disable no-underscore-dangle */
+/* eslint-disable no-param-reassign */
 export default class Modal {
   constructor(element) {
-    if (typeof element === "string") {
+    if (typeof element === 'string') {
       element = document.querySelector(element);
     }
     this._element = element;
   }
-  
+
   renderAddModal() {
     const addModal = `
       <form class="modal add-modal">
@@ -21,7 +23,7 @@ export default class Modal {
       </form>
     `;
 
-    this._element.insertAdjacentHTML("beforeend", addModal);
+    this._element.insertAdjacentHTML('beforeend', addModal);
   }
 
   renderDeleteModal() {
@@ -38,8 +40,8 @@ export default class Modal {
       </form>
     `;
 
-    this._element.insertAdjacentHTML("beforeend", deleteModal);
-deleteModal  }
+    this._element.insertAdjacentHTML('beforeend', deleteModal);
+  }
 
   renderEditModal() {
     const editModal = `
@@ -56,6 +58,6 @@ deleteModal  }
       </form>
     `;
 
-    this._element.insertAdjacentHTML("beforeend", editModal);
+    this._element.insertAdjacentHTML('beforeend', editModal);
   }
 }
